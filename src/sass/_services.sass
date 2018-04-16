@@ -1,0 +1,66 @@
+.services
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  padding-top: 15px
+
+  &__item
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 100%
+      left: 0
+      margin-top: -50px
+      +s(service-shadow)
+
+.service
+  position: relative
+  display: flex
+  flex-flow: column wrap
+  justify-content: space-around
+  min-width: 220px
+  height: 100%
+  padding: 45px 40px 30px
+  background-color: white
+  border-radius: 100px 15px
+  text-align: center
+  z-index: 2
+
+  &__label
+    position: absolute
+    top: 0
+    right: 0
+    transform: translate(40%, -40%)
+    width: 70px
+    height: 70px
+    padding: 7px 0
+    border-radius: 50%
+    background-color: #ce0b0b
+    font-size: 15px
+    line-height: 0.9
+    color: #fff
+    text-align: center
+    span
+      font-size: 25px
+
+  &__img
+    margin-bottom: 35px
+
+  &__title
+    font-size: 24px
+    line-height: 1
+    color: #000
+
+.sp-icon
+  display: inline-block
+  vertical-align: top
+
+.sp-iphone
+  +s(apple_black)
+
+.sp-android
+  +s(android)
+
+.sp-tablet
+  +s(tablet)

@@ -1,0 +1,77 @@
+.callback
+  max-width: 385px
+  margin: 0 auto
+
+  &__btns
+    display: inline-block
+
+  &__btn
+    position: relative
+    font-size: 24px
+    color: #b26900
+    line-height: 1
+    background-color: transparent
+    &:not(:last-child)
+      margin-right: 15px
+
+  &__btn-primary
+    &:before
+      content: ''
+      position: absolute
+      top: 100%
+      left: 50%
+      transform: translate(-50%, -6px)
+      z-index: 1
+      transition: transform 0.1s
+      +s(shadow)
+
+    span
+      display: block
+      position: relative
+      border-radius: 22px
+      z-index: 2
+      padding: 12px
+      +mb
+      font-size: 19px
+
+    &:active
+      &:before
+        transform: translate(-50%, -10px)
+
+  &__btn_green
+    span
+      color: #333
+      text-shadow: 0.2px 1px 0 rgba(255, 255, 255, 0.52)
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%)
+      box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.42), inset 0 0 2px rgba(255, 255, 255, 0.16)
+      background-color: #7bc522
+      transition: box-shadow 0.1s
+
+    &:active,
+    &:hover
+      span
+        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0), inset 0 0 2px rgba(255, 255, 255, 0)
+
+  &__btns-divider
+    margin-right: 15px
+    font-size: 16px
+    color: white
+
+  &__btn-link
+    position: relative
+    border-bottom: 1px solid #fff
+    transition: border-bottom-color 0.15s
+    span
+      font-size: 16px
+      color: white
+
+    &:before
+      content: ''
+      display: inline-block
+      margin-bottom: -2px
+      margin-right: 4px
+      +s(phone)
+
+    &:hover,
+    &:active
+      border-bottom-color: transparent
