@@ -33,6 +33,9 @@ body
   font-size: 12px
   line-height: 1.4
 
+.out
+  overflow: hidden
+
 .container
   position: relative
   max-width: 1200px
@@ -48,6 +51,43 @@ body
   line-height: 1
   text-align: center
 
-.section_services
+  &_left
+    text-align: left
+  &_white
+    color: #fff
+
+.section
+  position: relative
   padding: 50px 0 80px
+  &_no_pad
+    padding: 0
+
+  &__body
+    max-width: 540px
+    &_sm
+      max-width: 460px
+
+  &__text
+    margin-bottom: 40px
+    color: #fff
+    font-size: 24px
+
+
+
+.section_services
   background: url("../img/bgh11.png") repeat-x
+
+.section_remont
+  padding: 75px 0 80px
+  background-color: #ff9600
+
+.text-underline
+  text-decoration: underline
+
+.section-abstract-img
+  position: absolute
+  top: 0
+
+  &_remont
+    left: 50%
+    background-repeat: no-repeat
