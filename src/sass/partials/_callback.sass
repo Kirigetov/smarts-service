@@ -1,5 +1,5 @@
 .callback
-  max-width: 385px
+  max-width: 455px
   margin: 0 auto
   &_left
     margin: 0
@@ -34,9 +34,15 @@
       position: relative
       border-radius: 22px
       z-index: 2
-      padding: 12px
-      +mb
-      font-size: 19px
+      padding: 12px 25px
+      font-size: 24px
+
+      .section_care &
+        color: #96456b
+
+      .section_diagnostic &,
+      .section_paid &
+        color: #024640
 
     &:active
       &:before
@@ -44,6 +50,9 @@
 
   &__btn_green
     span
+      padding: 12px
+      +mb
+      font-size: 19px
       color: #333
       text-shadow: 0.2px 1px 0 rgba(255, 255, 255, 0.52)
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%)

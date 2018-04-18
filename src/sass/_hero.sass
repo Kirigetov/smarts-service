@@ -3,9 +3,31 @@
   background-color: #812891
 
   &__top
+    position: relative
     padding-top: 100px
     background: url("../img/pink-bg.png") repeat-y
     background-size: contain
+    z-index: 4
+
+  &__bottom
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
+      height: 200px
+      width: 1400px
+      background-color: black
+      box-shadow: 0 0 30px 30px #000
+      opacity: 0.42
+      border-radius: 490px/200px
+      z-index: 1
+
+  &__bottom-inner
+    position: relative
+    z-index: 2
+    background-color: #812891
 
   &__body
     display: flex

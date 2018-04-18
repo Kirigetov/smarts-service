@@ -3,9 +3,9 @@
 //     .whatever
 // 			+s(codedby) 
 // ## gradient example
-//     	+g(#232323, #5c5c5c);
+//     	+g(#232323, #5c5c5c)
 //	   horizontal
-//     	+gh(#232323, #5c5c5c);
+//     	+gh(#232323, #5c5c5c)
 // ## making bw-images
 //     img
 //			@extend %gray
@@ -17,7 +17,7 @@
 // ## use cycles
 //     @for $i from 1 through 3
 //       .item-#{$i}
-//			width: 2em * $i;
+//			width: 2em * $i
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
@@ -33,6 +33,10 @@ body
   font-size: 12px
   line-height: 1.4
 
+//img
+//  max-width: 100%
+//  height: auto
+
 .out
   overflow: hidden
 
@@ -42,6 +46,11 @@ body
   margin: 0 auto
   padding: 0 15px
 
+.text-underline
+  text-decoration: underline
+
+.text-bold
+  +mb
 
 // common blocks
 .title-h2
@@ -50,11 +59,29 @@ body
   font-size: 48px
   line-height: 1
   text-align: center
-
+  &_map
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    padding: 16px 0
+    opacity: 0.64
+    background-color: #9e5577
+    text-shadow: 0 1px 9px rgba(0, 0, 0, 0.58)
+  &_bold
+    +mb
   &_left
     text-align: left
   &_white
     color: #fff
+
+  .section_help &
+    margin-bottom: 15px
+
+.section-subtitle
+  font-size: 24px
+  color: #333
+  text-align: center
 
 .section
   position: relative
@@ -63,7 +90,9 @@ body
     padding: 0
 
   &__body
+    position: relative
     max-width: 540px
+
     &_sm
       max-width: 460px
 
@@ -72,22 +101,175 @@ body
     color: #fff
     font-size: 24px
 
+    .section_care &,
+    .section_diagnostic &,
+    .section_paid &
+      margin-bottom: 70px
 
+  &__top
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      //top: 57%
+      left: 50%
+      bottom: 0
+      transform: translateX(-50%)
+      height: 200px
+      width: 1060px
+      background-color: black
+      box-shadow: 0 0 30px 30px #000
+      opacity: 0.42
+      border-radius: 490px/100px
+      z-index: 1
+
+  &__top-inner
+    position: relative
+    padding: 70px 0 80px
+    z-index: 2
+    &_no_pad
+      padding: 0
+    &_pad_sm
+      padding: 40px 0 0
+    &_green
+      background-color: #009688
+
+  &__bottom
+    padding: 100px 0 80px
+
+  &__inner-flex
+    display: flex
+    flex-flow: row-reverse nowrap
+    justify-content: space-between
+    align-items: center
+
+    .section_paid &
+      max-width: 1000px
+      margin: 0 auto
 
 .section_services
   background: url("../img/bgh11.png") repeat-x
 
 .section_remont
-  padding: 75px 0 80px
-  background-color: #ff9600
+  .section__top-inner
+    background-color: #ff9600
 
-.text-underline
-  text-decoration: underline
+  .section__bottom
+    background-color: #ffab40
+
+  .section__body
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -395px
+      transform: translateY(-50%)
+      +s(man)
+
+.section_care
+  background-color: #9e5577
+
+  .section__top-inner
+    background-color: #ee81b4
+
+  .section__bottom
+    background-color: #9e5577
+
+  .section__body
+    max-width: 620px
+    display: flex
+    flex-flow: row wrap
+    margin-left: auto
+    padding-right: 100px
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      right: -300px
+      transform: translateY(-50%)
+      +s(heart)
+
+.section_diagnostic
+  .section__top-inner
+    background-color: #036c62
+
+  .section__body
+    max-width: 560px
+    display: flex
+    flex-flow: row wrap
+    margin-left: auto
+
+.section_paid
+  z-index: 2
+  background-color: #009688
+
+  .section__body
+    max-width: 600px
+    padding: 30px 0
+
+.section_help
+  .section__top-inner
+    background-color: #00ab9b
+
+.section_chat
+  .section__top
+    background-color: #f6f6f6
+    padding: 60px 85px 40px
+    &:before
+      content: none
+    .title-h2
+      margin: 0
+
 
 .section-abstract-img
   position: absolute
-  top: 0
+  z-index: 2
+  background-repeat: no-repeat
 
   &_remont
+    top: 0
     left: 50%
-    background-repeat: no-repeat
+
+  &_care
+    top: -400px
+    left: -370px
+
+  &_diagnostic
+    top: -75px
+    left: -350px
+
+  &_paid
+    position: relative
+    top: auto
+    left: auto
+
+.section-cols
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 920px
+  margin: 0 auto
+
+.section-col
+  flex: 0 1 390px
+  &__header
+    display: flex
+    flex-flow: row nowrap
+    margin-bottom: 15px
+
+  &__img
+    flex: 0 0 auto
+    margin-right: 20px
+
+  &__title
+    font-size: 24px
+    line-height: 1.2
+    color: #fff
+
+  &__text
+    font-size: 18px
+    text-align: justify
+    color: #fff
+
+    &_dark
+      color: #333333

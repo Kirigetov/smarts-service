@@ -1,0 +1,60 @@
+.form
+  &__field
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    &_submit
+      text-align: right
+
+  &__input
+    width: 100%
+    padding: 14px 35px
+    background-color: white
+    border-radius: 28px
+    color: #333333
+    font-size: 24px
+    line-height: 1
+
+.form_promo
+  .form__input::placeholder
+    color: darkgrey
+  .form__submit
+    padding: 16px 35px
+    background-color: #08f
+    border-radius: 32px
+    font-size: 24px
+    color: #fff
+
+.form_feedback
+  .form__input::placeholder
+    color: #003c36
+  .form__submit
+    padding: 8px 35px 9px
+    background-color: #fff
+    border-radius: 32px
+    font-size: 24px
+    color: #003c36
+
+.form-wrap
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 1000px
+  margin: 60px auto 0
+
+  &_bg
+    &:before
+      content: ''
+      position: absolute
+      +s(support)
+      top: 50%
+      left: 48%
+      transform: translate(-50%, -50%)
+      z-index: -1
+
+  &__col
+    &:first-child
+      flex: 0 0 430px
+    &:last-child
+      flex: 0 0 390px

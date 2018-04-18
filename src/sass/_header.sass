@@ -3,10 +3,13 @@
   top: 0
   left: 0
   right: 0
-  z-index: 10
+  z-index: 1000
   background-image: url(../img/pink-bg.png)
   background-size: contain
   background-repeat: repeat-y
+
+  &.is-fixed
+    background-size: cover
 
   &__inner
     position: relative
@@ -18,7 +21,7 @@
     transition: padding-top 0.2s, padding-bottom 0.2s
 
     .is-fixed &
-      padding: 20px 0
+      padding: 10px 0
 
 .header-logo
   a
