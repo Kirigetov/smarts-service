@@ -12,9 +12,15 @@
     justify-content: space-between
     align-items: flex-end
     font-size: 0
-    
+
+    +r($tab)
+      justify-content: center
+
     li
       display: inline-block
       margin-bottom: 35px
       &:not(:first-child)
         padding-bottom: 5px
+
+      +r($tab)
+        padding: 0 15px
