@@ -7,6 +7,12 @@
       +r($tab)
         padding: 50px 40px
 
+      +r($tab-sm)
+        padding: 50px 0
+
+        .title-h2
+          padding: 0 40px
+
     .info-block__body
       max-width: none
 
@@ -41,12 +47,24 @@
     align-items: center
     &:first-child
       flex: 0 1 45%
+      +r($tab-sm)
+        flex: 0 0 50%
+        margin-bottom: 30px
+
     &:nth-child(2)
       flex: 0 1 30%
       padding: 0 10px
+      +r($tab-sm)
+        display: none
+
     &:nth-child(3)
       flex: 0 1 25%
       justify-content: flex-end
+
+      +r($tab-sm)
+        flex: 1 0 auto
+        justify-content: center
+        text-align: center
 
     +r($tab)
       padding: 0 15px
@@ -65,6 +83,10 @@
 .socials
   display: flex
   align-items: flex-end
+
+  +r($tab-sm)
+    margin-bottom: 30px
+
   &__link
     display: inline-block
     transition: opacity .2s
@@ -73,3 +95,7 @@
 
     &:hover
       opacity: 0.75
+
+.payment
+  +r($tab-sm)
+    flex: 1 0 100%
