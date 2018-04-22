@@ -4,11 +4,17 @@
   align-items: flex-start
   padding-top: 50px
 
+  +r($tab-sm)
+    flex-flow: row wrap
+
   &__item
     flex: 1 0 25%
     margin-bottom: 40px
     padding: 0 15px
     text-align: center
+
+    +r($tab-sm)
+      flex: 1 0 50%
 
   &__img
     min-height: 110px

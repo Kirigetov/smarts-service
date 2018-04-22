@@ -8,6 +8,9 @@
   background-size: contain
   background-repeat: repeat-y
 
+  +r($tab)
+    position: relative
+
   &.is-fixed
     background-size: cover
 
@@ -23,9 +26,13 @@
     .is-fixed &
       padding: 10px 0
 
+    +r($tab)
+      padding: 20px 0 0
+      align-items: flex-start
+
 .header-logo
   +r($tab)
-    max-width: 220px
+    flex: 0 0 220px
   a
     display: block
     font-size: 0
@@ -35,6 +42,10 @@
 .menu-list
   list-style-type: none
   font-size: 0
+
+  +r($tab)
+    flex: 1 0 0
+    padding-left: 50px
 
   &__item
     display: inline-block
@@ -46,6 +57,9 @@
         background-color: rgba(47, 47, 47, 0.2)
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.04) 100%)
         box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 1px 2px rgba(0, 0, 0, 0.4)
+
+    +r($tab)
+      margin-bottom: 15px
 
   &__link
     display: block

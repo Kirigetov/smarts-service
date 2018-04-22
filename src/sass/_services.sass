@@ -4,6 +4,13 @@
   justify-content: space-between
   padding-top: 15px
 
+  +r($tab)
+    max-width: 900px
+    margin: 0 auto
+
+  +r($tab-sm)
+    padding: 15px 20px 0
+
   &__item
     position: relative
     &:after
@@ -26,6 +33,15 @@
   border-radius: 100px 15px
   text-align: center
   z-index: 2
+
+  +r($tab)
+    padding: 45px 30px 30px
+
+  +r($tab-sm)
+    min-width: 210px
+
+  +r($mob)
+    min-width: 220px
 
   &__label
     position: absolute

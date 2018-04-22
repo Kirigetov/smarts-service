@@ -15,15 +15,29 @@
     font-size: 24px
     line-height: 1
 
+    +r($tab)
+      padding: 10px 20px
+
 .form_promo
+
+  +r($tab-sm)
+    padding: 0 20px
+
   .form__input::placeholder
     color: darkgrey
+    +r($tab)
+      font-size: 20px
+
   .form__submit
     padding: 16px 35px
     background-color: #08f
     border-radius: 32px
     font-size: 24px
     color: #fff
+
+    +r($tab)
+      padding: 10px 20px
+      font-size: 22px
 
 .form_feedback
   .form__input::placeholder
@@ -43,6 +57,14 @@
   max-width: 1000px
   margin: 60px auto 0
 
+  +r($tab)
+    max-width: 900px
+
+  +r($tab-sm)
+    flex-flow: row wrap
+    max-width: 430px
+    margin: 60px auto 0
+
   &_bg
     &:before
       content: ''
@@ -53,8 +75,21 @@
       transform: translate(-50%, -50%)
       z-index: -1
 
+      +r($tab-sm)
+        top: -70px
+        left: 50%
+        transform: translate(-50%, -50%) scale(0.8)
+
   &__col
     &:first-child
       flex: 0 0 430px
+
+      +r($tab-sm)
+        margin-bottom: 30px
+
     &:last-child
       flex: 0 0 390px
+
+      +r($tab-sm)
+        .section__text
+          margin: 0

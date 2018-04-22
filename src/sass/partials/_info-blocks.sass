@@ -4,6 +4,9 @@
     .info-block__inner
       padding: 50px 60px 50px 90px
 
+      +r($tab)
+        padding: 50px 40px
+
     .info-block__body
       max-width: none
 
@@ -17,8 +20,20 @@
     max-width: 890px
     margin: 40px auto 0
 
+    +r($tab)
+      margin: 40px -10px 0
+
+    +r($tab-sm)
+      flex-flow: row wrap
+      justify-content: center
+      margin: 40px 0 0
+
+
   &__item
     margin-bottom: 30px
+
+    +r($tab-sm)
+      padding: 0 20px
 
   &__col
     display: flex
@@ -32,6 +47,9 @@
     &:nth-child(3)
       flex: 0 1 25%
       justify-content: flex-end
+
+    +r($tab)
+      padding: 0 15px
 
   &__nav
     a

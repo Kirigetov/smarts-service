@@ -33,10 +33,6 @@ body
   font-size: 12px
   line-height: 1.4
 
-//img
-//  max-width: 100%
-//  height: auto
-
 .out
   overflow: hidden
 
@@ -59,6 +55,10 @@ body
   font-size: 48px
   line-height: 1
   text-align: center
+
+  +r($tab-sm)
+    font-size: 38px
+
   &_map
     position: absolute
     top: 0
@@ -92,9 +92,12 @@ body
   &__body
     position: relative
     max-width: 540px
-
+    z-index: 100
     &_sm
       max-width: 460px
+
+    +r($tab-sm)
+      max-width: none
 
   &__text
     margin-bottom: 40px
@@ -128,14 +131,20 @@ body
     padding: 70px 0 80px
     z-index: 2
     &_no_pad
-      padding: 0
+      padding: 0!important
     &_pad_sm
       padding: 40px 0 0
     &_green
       background-color: #009688
 
+    +r($tab-sm)
+      padding: 40px 0 60px
+
   &__bottom
     padding: 100px 0 80px
+
+    +r($tab-sm)
+      padding: 40px 0 20px
 
   &__inner-flex
     display: flex
@@ -146,6 +155,9 @@ body
     .section_paid &
       max-width: 1000px
       margin: 0 auto
+
+      +r($tab)
+        max-width: 920px
 
 .section_services
   background: url("../img/bgh11.png") repeat-x
@@ -166,11 +178,24 @@ body
       transform: translateY(-50%)
       +s(man)
 
+    +r($tab-sm)
+      max-width: none
+      padding-right: 150px
+
+      &:before
+        top: -50px
+        right: -20px
+        left: auto
+        transform: translate(0) scale(0.7)
+
 .section_care
   background-color: #9e5577
 
   .section__top-inner
     background-color: #ee81b4
+    +r($tab-sm)
+      .container
+        padding-bottom: 450px
 
   .section__bottom
     background-color: #9e5577
@@ -189,15 +214,37 @@ body
       transform: translateY(-50%)
       +s(heart)
 
+    +r($tab)
+      max-width: 500px
+      padding-right: 50px
+
+    +r($tab-sm)
+      max-width: none
+      padding-right: 150px
+      &:before
+        top: -40px
+        right: -20px
+        transform: translate(0) scale(0.7)
+
 .section_diagnostic
+
   .section__top-inner
     background-color: #036c62
+
+    +r($tab-sm)
+      padding: 0
+
+      .container
+        padding: 0
 
   .section__body
     max-width: 560px
     display: flex
     flex-flow: row wrap
     margin-left: auto
+
+    +r($tab-sm)
+      display: none
 
 .section_paid
   z-index: 2
@@ -226,17 +273,62 @@ body
   z-index: 2
   background-repeat: no-repeat
 
+  +r($tab)
+    img
+      max-width: 100%
+      height: auto
+
   &_remont
     top: 0
     left: 50%
+    background: #ff9600 url(../img/service.png) no-repeat 0% 50%
+    width: 100%
+    height: 464px
+    +r($tab)
+      width: 530px
+      height: 464px
+
+    +r($tab-sm)
+      position: relative
+      top: auto
+      left: auto
+      width: 100%
+      height: 300px
 
   &_care
     top: -400px
     left: -370px
 
+    +r($tab-sm)
+      background: url(../img/safety.png) no-repeat 170% 0%
+      width: 100%
+      height: 834px
+      top: auto
+      left: 20px
+      bottom: -60px
+
+      img
+        display: none
+
   &_diagnostic
     top: -75px
     left: -350px
+
+    +r($tab)
+      top: -69px
+      left: -350px
+      width: 75%
+
+    +r($tab-sm)
+      position: relative
+      background: url(../img/diagnostic.png) no-repeat 50%
+      width: 100%
+      height: 370px
+      top: auto
+      left: auto
+
+      img
+        display: none
 
   &_paid
     position: relative
@@ -250,8 +342,16 @@ body
   max-width: 920px
   margin: 0 auto
 
+  +r($tab)
+    max-width: 850px
+
 .section-col
   flex: 0 1 390px
+
+  +r($tab-sm)
+    margin-bottom: 20px
+    padding: 0 20px
+
   &__header
     display: flex
     flex-flow: row nowrap
