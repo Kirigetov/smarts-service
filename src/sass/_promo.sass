@@ -26,8 +26,17 @@
     +r($tab-sm)
       padding: 50px 0
 
+    +r($mob)
+      padding: 25px 0
+      justify-content: flex-start
+
 .promo-discount
   text-align: center
+  +r($mob)
+    min-height: 300px
+    max-width: 200px
+    text-align: left
+
   &__title
     font-size: 48px
     color: #fff
@@ -37,6 +46,11 @@
 
     +r($tab-sm)
       flex: 1 0 50%
+
+    +r($mob)
+      font-size: 36px
+      line-height: 1
+      margin-bottom: 30px
 
   &__sum
     +mb
@@ -48,6 +62,13 @@
     +r($tab)
       font-size: 60px
 
+    +r($mob)
+      margin-bottom: 20px
+      font-size: 66px
+      line-height: 46px
+      span
+        font-size: 40px
+
     @supports (-webkit-background-clip: text)
       background: linear-gradient(to bottom, rgba(0,0,0,1) 65%,rgba(48,47,75, 0.6) 100%)
       -webkit-background-clip: text
@@ -56,6 +77,8 @@
   &__text
     font-size: 30px
     color: #fff
+    +r($mob)
+      font-size: 24px
 
 .promo-img
   position: absolute
@@ -72,6 +95,16 @@
     left: auto
     margin-bottom: -25px
     transform: translateX(0)
+
+  +r($mob)
+    position: absolute
+    top: -20px
+    right: -90px
+    max-width: 260px
+
+    img
+      max-width: 100%
+      height: auto
 
 .promo-form-wrap
   +r($tab-sm)

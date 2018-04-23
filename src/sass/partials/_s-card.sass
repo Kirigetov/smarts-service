@@ -9,6 +9,10 @@
     .s-card__descr a
       color: #333
 
+  +r($mob)
+    flex-flow: column wrap
+    text-align: center
+
   &_big
     .s-card__title
       font-size: 24px
@@ -18,15 +22,21 @@
       font-size: 18px
 
   &__img
-    //flex: 0 0 auto
     min-width: 52px
     text-align: center
     margin-right: 15px
+
+    +r($mob)
+      margin-right: 0
 
   &__title
     white-space: nowrap
     font-size: 19px
     color: #fff
+
+    span
+      +r($mob)
+        display: none
 
   &__descr
     font-size: 12px
