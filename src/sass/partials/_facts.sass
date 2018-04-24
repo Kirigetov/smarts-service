@@ -7,6 +7,9 @@
   +r($tab-sm)
     flex-flow: row wrap
 
+  +r($mob)
+    display: block
+
   &__item
     flex: 1 0 25%
     margin-bottom: 40px
@@ -15,6 +18,10 @@
 
     +r($tab-sm)
       flex: 1 0 50%
+    +r($mob)
+      display: block
+      max-width: 280px
+      margin: 0 auto 40px
 
   &__img
     min-height: 110px

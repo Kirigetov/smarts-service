@@ -13,6 +13,19 @@
     flex-flow: column wrap
     text-align: center
 
+    .info-block_contacts &
+      flex-flow: row nowrap
+      text-align: left
+      align-items: flex-start
+
+    .info-block_simple &
+      display: block
+      max-width: 320px
+      padding: 13px 25px
+      border: 2px solid #2d2d2d
+      border-radius: 12px
+      +clr
+
   &_big
     .s-card__title
       font-size: 24px
@@ -29,6 +42,14 @@
     +r($mob)
       margin-right: 0
 
+      .info-block_simple &,
+      .info-block_contacts &
+        margin-top: 7px
+        margin-right: 10px
+
+      .info-block_simple &
+        float: left
+
   &__title
     white-space: nowrap
     font-size: 19px
@@ -38,9 +59,13 @@
       +r($mob)
         display: none
 
+    +r($mob)
+      white-space: normal
+      margin-bottom: 10px
+      line-height: 1.1
+
   &__descr
     font-size: 12px
     color: #fff
-
     a
-      text-decoration: none
+      //text-decoration: none

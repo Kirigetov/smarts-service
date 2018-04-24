@@ -1,6 +1,12 @@
 .callback
   max-width: 455px
   margin: 0 auto
+  &_middle
+    +r($mob)
+      margin: 50px auto 80px
+      .section_paid &
+        margin-bottom: 0
+
   &_left
     margin: 0
 
@@ -20,6 +26,9 @@
       margin-right: 15px
       +r($mob)
         margin-right: 0
+
+        .callback_middle &
+          margin: 0 auto 30px
 
   &__btn-primary
     +r($mob)

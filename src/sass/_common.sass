@@ -48,6 +48,15 @@ body
 .text-bold
   +mb
 
+.hidden-mob
+  +r($mob)
+    display: none
+    
+.visible-mob
+  display: none
+  +r($mob)
+    display: block
+
 // common blocks
 .title-h2
   margin-bottom: 30px
@@ -55,9 +64,11 @@ body
   font-size: 48px
   line-height: 1
   text-align: center
-
-  +r($tab-sm)
-    font-size: 38px
+  &_sm
+    +r($mob)
+      max-width: 240px
+      margin: 0 auto 30px
+      font-size: 36px
 
   &_map
     position: absolute
@@ -158,6 +169,8 @@ body
 
       +r($tab)
         max-width: 920px
+      +r($mob)
+        display: block
 
 .section_services
   background: url("../img/bgh11.png") repeat-x
@@ -165,6 +178,8 @@ body
 .section_remont
   .section__top-inner
     background-color: #ff9600
+    +r($mob)
+      padding: 40px 0 10px
 
   .section__bottom
     background-color: #ffab40
@@ -181,12 +196,21 @@ body
     +r($tab-sm)
       max-width: none
       padding-right: 150px
-
       &:before
         top: -50px
         right: -20px
         left: auto
         transform: translate(0) scale(0.7)
+
+    +r($mob)
+      padding: 0 15px
+      &:before
+        right: -35px
+        transform: translate(0) scale(0.6)
+
+  +r($mob)
+    .title-h2
+      padding-right: 125px
 
 .section_care
   background-color: #9e5577
@@ -196,6 +220,9 @@ body
     +r($tab-sm)
       .container
         padding-bottom: 450px
+    +r($mob)
+      .container
+        padding-bottom: 330px
 
   .section__bottom
     background-color: #9e5577
@@ -225,9 +252,17 @@ body
         top: -40px
         right: -20px
         transform: translate(0) scale(0.7)
+    +r($mob)
+      padding: 0 15px
+      &:before
+        right: -35px
+        transform: translate(0) scale(0.6)
+
+  +r($mob)
+    .title-h2
+      padding-right: 125px
 
 .section_diagnostic
-
   .section__top-inner
     background-color: #036c62
 
@@ -253,6 +288,15 @@ body
   .section__body
     max-width: 600px
     padding: 30px 0
+    +r($mob)
+      padding: 0 15px
+      &:before
+        position: absolute
+        right: 20px
+        transform: translate(0) scale(0.6)
+  +r($mob)
+    .title-h2
+      padding-right: 140px
 
 .section_help
   .section__top-inner
@@ -266,6 +310,9 @@ body
       content: none
     .title-h2
       margin: 0
+
+    +r($mob)
+      background: none
 
 
 .section-abstract-img
@@ -306,9 +353,14 @@ body
       top: auto
       left: 20px
       bottom: -60px
-
       img
         display: none
+
+    +r($mob)
+      left: 0
+      height: 594px
+      background-size: 160%
+      background-position: 115% 0
 
   &_diagnostic
     top: -75px
@@ -335,6 +387,17 @@ body
     top: auto
     left: auto
 
+    +r($mob)
+      position: absolute
+      right: 20px
+      width: 150px
+      height: 150px
+      background: url("../img/paid.png") no-repeat 0 0
+      background-size: contain
+
+      img
+        display: none
+
 .section-cols
   display: flex
   justify-content: space-between
@@ -345,6 +408,9 @@ body
   +r($tab)
     max-width: 850px
 
+  +r($mob)
+    flex-flow: row wrap
+
 .section-col
   flex: 0 1 390px
 
@@ -352,10 +418,17 @@ body
     margin-bottom: 20px
     padding: 0 20px
 
+  +r($mob)
+    margin-bottom: 30px
+    flex: 0 1 auto
+
   &__header
     display: flex
     flex-flow: row nowrap
     margin-bottom: 15px
+
+    +r($mob)
+      align-items: center
 
   &__img
     flex: 0 0 auto

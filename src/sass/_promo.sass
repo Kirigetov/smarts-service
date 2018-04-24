@@ -1,6 +1,9 @@
 .promo
   position: relative
   background-color: #302f4b
+  +r($mob)
+    .container
+      padding: 0
 
   &:after
     content: ''
@@ -27,7 +30,7 @@
       padding: 50px 0
 
     +r($mob)
-      padding: 25px 0
+      padding: 25px 0 0
       justify-content: flex-start
 
 .promo-discount
@@ -35,7 +38,11 @@
   +r($mob)
     min-height: 300px
     max-width: 200px
+    padding-left: 30px
     text-align: left
+
+  +r($mob-sm)
+    padding-left: 0
 
   &__title
     font-size: 48px
@@ -79,6 +86,9 @@
     color: #fff
     +r($mob)
       font-size: 24px
+      line-height: 1.1
+      span
+        display: none
 
 .promo-img
   position: absolute
@@ -120,3 +130,14 @@
       margin-bottom: 40px
       background-color: #ff9600
       z-index: 10
+
+  +r($mob)
+    flex: 0 1 100%
+    margin: 0
+    padding: 0 0 30px
+    background-color: #444450
+
+.br_mob
+  display: inline-block
+  +r($mob)
+    display: block
