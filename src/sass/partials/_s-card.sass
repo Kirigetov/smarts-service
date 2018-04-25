@@ -9,6 +9,21 @@
     .s-card__descr a
       color: #333
 
+  .popup &
+    height: 100%
+    text-align: left
+    +r($mob)
+      margin: 0 auto
+
+  +r($tab-sm)
+    .popup &
+    display: block
+    max-width: 320px
+    padding: 13px 25px
+    border: 2px solid #2d2d2d
+    border-radius: 12px
+    +clr
+
   +r($mob)
     flex-flow: column wrap
     text-align: center
@@ -39,6 +54,13 @@
     text-align: center
     margin-right: 15px
 
+    &_w42
+      min-width: 42px
+
+    +r($tab-sm)
+      .popup &
+        float: left
+
     +r($mob)
       margin-right: 0
 
@@ -64,8 +86,33 @@
       margin-bottom: 10px
       line-height: 1.1
 
+    .popup &
+      font-size: 18px
+      white-space: normal
+      +mb
+
+      +r($mob)
+        text-align: center
+
+    a
+      color: #333
+
+  &__title_thin
+    .popup &
+      +mr
+
   &__descr
     font-size: 12px
     color: #fff
-    a
-      //text-decoration: none
+    .popup &
+      font-size: 14px
+
+.popup
+  .s-card__img
+    .sp-icon
+      display: flex
+      flex: 1 0 auto
+
+    +r($tab-sm)
+      .sp-icon_scale
+        transform: scale(0.7)

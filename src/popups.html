@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>СМАРТС сервис</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+<!--BEGIN content-->
+<div style="display: none;" class="popup"  >
+    <div class="popup__inner">
+        <div class="popup__body">
+
+            <div class="popup__close"><span></span></div>
+
+            <div class="popup__title popup__title_nowrap popup__title_bold">
+                <i class="sp-icon sp-popap-arrow"></i>
+                <span>Отправить заявку <br>на ремонт</span></div>
+            <div class="popup__form">
+                <form class="form form_popup">
+                    <div class="form__row">
+                        <label class="form__label" for="phone-name">Введите Ваш номер телефона</label>
+                        <input class="form__input js-phone-name" type="text" id="phone-name" placeholder="Ваше имя" data-validation="name">
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label" for="phone-number">Введите Ваш номер телефона</label>
+                        <input class="form__input js-phone-number" type="phone" id="phone-number" placeholder="Ваш телефон" data-validation="number">
+                        <button class="form__btn" type="submit">отправить</button>
+                    </div>
+                </form>
+            </div>
+            <div class="popup__text">
+                Менеджеры сервисного центра Смартс работают <br>
+                ежедневно с 10:00 о 20:00 и свяжутся с вами в рабочее время!
+            </div>
+            <!--<div class="popup__content">-->
+            <!--</div>-->
+            <div class="popup__footer">
+                <div class="info-block info-block_simple">
+                    <div class="info-block__inner">
+
+                        <div class="info-block__body ask-help">
+                            <div class="info-block__item">
+                                <div class="s-card s-card_dark">
+                                    <div class="s-card__img s-card__img_w42">
+                                        <i class="sp-icon sp-icon_scale sp-phone_big"></i>
+                                    </div>
+                                    <div class="s-card__body">
+                                        <div class="s-card__title">Закажите звонок</div>
+                                        <div class="s-card__descr">перезваниваем за 30 секунд!
+                                            с 10:00 до 20:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-block__item">
+                                <div class="s-card s-card_dark">
+                                    <div class="s-card__img">
+                                        <i class="sp-icon sp-icon_scale sp-messages"></i>
+                                    </div>
+                                    <div class="s-card__body">
+                                        <div class="s-card__title">Вопрос в on-line чате</div>
+                                        <div class="s-card__descr">оператор ответит в режиме чата
+                                            с 10:00 до 20:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup" >
+    <div class="popup__inner">
+        <div class="popup__body">
+
+            <div class="popup__close"><span></span></div>
+
+            <div class="popup__title">
+                <i class="sp-icon sp-checkmark"></i>
+                <span class="hidden-mob">Ваша заявка на ремонт <br> отправлена!</span>
+                <span class="visible-mob">Заявка <br> успешно <br> отправлена!</span>
+            </div>
+
+            <div class="popup__content">
+                <div class="popup__text popup__text_lg">
+                    Менеджер сервисного центра Смартс <br>
+                    <span class="text-bold">перезвонит Вам в ближайшее время!</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="popup__body-wrap">
+            <div class="popup__body popup__body_mod">
+
+            <div class="info-block info-block_simple">
+                <div class="info-block__inner">
+
+                    <div class="info-block__body info-block__body_mod info-block__body_wide_img">
+                        <div class="info-block__item info-block__item_fl">
+                            <div class="s-card s-card_dark">
+                                <div class="s-card__img">
+                                    <i class="sp-icon sp-watch"></i>
+                                </div>
+                                <div class="s-card__body">
+                                    <div class="s-card__title s-card__title_thin">График работы
+                                        сервисного центра</div>
+                                    <div class="s-card__descr text-bold">ежедневно с 10:00 до 20:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-block__item visible-mob">
+                            <div class="s-card s-card_dark">
+                                <div class="s-card__img s-card__img_w42">
+                                    <i class="sp-icon sp-phone_big"></i>
+                                </div>
+                                <div class="s-card__body">
+                                    <div class="s-card__title">Закажите звонок
+                                        менеджера</div>
+                                    <div class="s-card__descr">перезваниваем за 30 секунд!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-block__item info-block__item_fl">
+                            <div class="s-card s-card_dark">
+                                <div class="s-card__img">
+                                    <i class="sp-icon sp-user"></i>
+                                </div>
+                                <div class="s-card__body">
+                                    <div class="s-card__title s-card__title_thin"><a href="">Прочитать
+                                        отзывы клиентов</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-block__item info-block__item_fl">
+                            <div class="s-card s-card_dark">
+                                <div class="s-card__img">
+                                    <i class="sp-icon sp-talk"></i>
+                                </div>
+                                <div class="s-card__body">
+                                    <div class="s-card__title s-card__title_thin">Задать вопрос
+                                        в on-line чат </div>
+                                    <div class="s-card__descr text-bold"><span class="hidden-mob">ежедневно</span>  с 10:00 до 20:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-block__item info-block__item_fl hidden-mob">
+                            <div class="s-card s-card_dark">
+                                <div class="s-card__img">
+                                    <i class="sp-icon sp-phone_big"></i>
+                                </div>
+                                <div class="s-card__body">
+                                    <div class="s-card__title s-card__title_thin">Заказать обратный
+                                        звонок</div>
+                                    <div class="s-card__descr text-bold">ежедневно с 10:00 до 20:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="popup__footer">-->
+            <!--</div>-->
+        </div>
+        </div>
+    </div>
+</div>
+
+<!--END content-->
+</body>
+</html>
