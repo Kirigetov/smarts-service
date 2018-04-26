@@ -17,10 +17,14 @@
     vertical-align: middle
     width: 100%
     max-width: 600px
+    max-height: 700px
+    overflow-y: auto
     border-radius: 8px
-    overflow: hidden
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.68)
     background-color: #f2f4f3
+    +r($mob)
+      max-height: none
+      overflow: hidden
 
   &__head
     .popup-img
@@ -28,8 +32,12 @@
   &__body
     position: relative
     padding: 50px 45px
+    overflow: hidden
     +r($mob)
       padding: 50px 30px 30px
+
+    &_sm
+      padding: 50px 45px 30px
 
     &_mod
       padding: 0 30px 30px
@@ -52,7 +60,10 @@
 
     +r($mob)
       flex-flow: row wrap
+      justify-content: space-around
       +mb
+      .sp-icon
+        margin-bottom: 10px
 
     &_nowrap
       +r($mob)
@@ -73,6 +84,8 @@
 
   &__content
     padding: 20px 0 0
+    &_sm
+      padding: 0
     +r($mob)
       padding: 0 0 20px
 
@@ -87,6 +100,15 @@
     color: #000
     &_lg
       font-size: 24px
+    &_sm
+      font-size: 14px
+    &_justify
+      text-align: justify
+    &_mb_sm
+      margin-bottom: 25px
+
+    & + &
+      margin-top: -10px
 
   &__close
     position: absolute
@@ -118,41 +140,86 @@
       &:after
         transform: translate(-50%, -50%) rotate(-45deg)
 
-
-.form_popup
-  max-width: 320px
-  margin: 0 auto 40px
-
-  .form__row
-    position: relative
-
-  .form__input
-    padding: 11px 20px
-    background-color: white
-    border: 2px solid #e8e9ed
-    border-radius: 5px
+.popup-services
+  text-align: left
+  margin-bottom: 30px
+  &__title
+    margin-bottom: 20px
+    +mb
+    font-size: 16px
+    color: #4d4d4d
+  &__list
     font-size: 14px
+    color: #4d4d4d
+    li
+      margin-bottom: 7px
 
-    &[type="phone"]
-      padding: 11px 100px 11px 20px
 
-    &::placeholder
-      font-size: 14px
-      line-height: 1.2
-      color: #9fa3a7
+.popup-table-wrap
+  display: flex
+  flex-flow: row-reverse
+  justify-content: flex-end
+  +r($mob)
+    display: block
 
-  .form__row
+.popup-table
+  max-width: 390px
+  margin-bottom: 40px
+  width: auto
+
+  tr
+    &:nth-child(odd)
+      th, td
+        background-color: white
+        background-image: linear-gradient(to top, transparent 0%, transparent 100%)
+
+  th, td
+    border: 1px solid #d7d8d8
+
+  th, td
+    font-size: 11px
+    color: #363636
+    padding: 9px 10px
+
+  td
+    font-size: 15px
+
+  .parts-type
+    font-size: 16px
+    color: #e33f3f
+
+  .display-price
+    color: #4aa31e
+
+  .phone-model
+    white-space: nowrap
+    text-align: left
+
+
+.popup-table-nav
+  margin-bottom: 10px
+  margin-left: 40px
+  +r($mob)
+    margin-left: 0
+
+  li
     margin-bottom: 10px
+    cursor: pointer
+    +r($mob)
+      display: inline-block
+      margin-right: 8px
 
-  .form__btn
-    position: absolute
-    right: 0
-    top: -1px
-    display: inline-block
-    width: 94px
-    height: 41px
-    background-color: #8970b6
-    border-radius: 0 5px 5px 0
-    font-size: 10px
-    text-transform: uppercase
-    color: #FFF
+  li.is-active
+    a
+      background-color: #010101
+      color: #fff
+  a
+    display: block
+    min-width: 115px
+    padding: 6px 10px
+    background-color: #ccc
+    border-radius: 5px
+    font-size: 17px
+    color: #010101
+    text-decoration: none
+

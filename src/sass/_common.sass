@@ -64,11 +64,14 @@ body
   font-size: 48px
   line-height: 1
   text-align: center
+  +r(350)
+    font-size: 36px
   &_sm
     +r($mob)
       max-width: 240px
       margin: 0 auto 30px
       font-size: 36px
+
 
   &_map
     position: absolute
@@ -341,6 +344,8 @@ body
       left: auto
       width: 100%
       height: 300px
+    +r($mob)
+      background: #ff9600 url(../img/service.png) no-repeat 30% 50%
 
   &_care
     top: -400px
@@ -389,6 +394,7 @@ body
 
     +r($mob)
       position: absolute
+      top: -20px
       right: 20px
       width: 150px
       height: 150px
